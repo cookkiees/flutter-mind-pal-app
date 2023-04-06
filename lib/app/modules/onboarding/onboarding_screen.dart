@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:mind_pal_app/app/routings/app_routers.dart';
 import 'package:mind_pal_app/app/utils/my_colors.dart';
 import '../../components/header_text_widget.dart';
 import 'onboarding_controller.dart';
@@ -18,14 +19,7 @@ class OnboardingScreen extends GetView<OnboardingController> {
           color: Colors.white,
           fontSize: 18.0,
           fontWeight: FontWeight.bold),
-      onFinish: () {
-        // Navigator.push(
-        //   context,
-        //   CupertinoPageRoute(
-        //     builder: (context) => const RegisterPage(),
-        //   ),
-        // );
-      },
+      onFinish: () => Get.toNamed(AppRouters.main),
       finishButtonStyle:
           const FinishButtonStyle(backgroundColor: MyColors.purple),
       skipTextButton: const Text(
