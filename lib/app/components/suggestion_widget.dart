@@ -7,12 +7,14 @@ class SuggestionWidget extends StatelessWidget {
   const SuggestionWidget({
     super.key,
     required this.image,
-    required this.title,
+    required this.widget,
     required this.titleButton,
+    this.size = const Size(155, 40),
   });
   final String image;
-  final String title;
+  final Widget widget;
   final String titleButton;
+  final Size? size;
 
   @override
   Widget build(BuildContext context) {
@@ -25,21 +27,13 @@ class SuggestionWidget extends StatelessWidget {
         ),
         Column(
           children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 24,
-                fontFamily: "Outfit-bold",
-                fontWeight: FontWeight.w600,
-                color: MyColors.neutraldDark,
-              ),
-            ),
+            widget,
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
                 backgroundColor: MyColors.purple,
-                minimumSize: const Size(155, 40),
+                minimumSize: size,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
