@@ -8,4 +8,5 @@ abstract class AppRouters {
   static const journal = '/journal';
   static const subscription = '/subscription';
   static const aiChat = '/aiChat';
+  static const selfCareDetail = '/selfCareDetail';
 }

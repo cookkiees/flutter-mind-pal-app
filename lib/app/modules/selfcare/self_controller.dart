@@ -21,4 +21,13 @@ class SelfCareController extends GetxController {
     '5 Exercises',
     '2 Exercises',
   ];
+
+  final List<String> logoSelf = [
+    'assets/icons/self-3 copy.svg',
+    'assets/icons/self-2.svg',
+    'assets/icons/self-3.svg',
+    'assets/icons/self=5 copy.svg',
+    'assets/icons/self-4.svg',
+    'assets/icons/self=5.svg',
+  ];
 }
