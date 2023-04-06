@@ -5,6 +5,8 @@ import '../modules/main/main_binding.dart';
 import '../modules/main/main_screen.dart';
 import '../modules/onboarding/onboarding_binding.dart';
 import '../modules/onboarding/onboarding_screen.dart';
+import '../modules/terapist/terapist_binding.dart';
+import '../modules/terapist/terapist_screen.dart';
 import 'app_routers.dart';
 
 class AppPages {
@@ -25,6 +27,11 @@ class AppPages {
       name: AppRouters.home,
       page: () => const HomeScreen(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: AppRouters.terapist,
+      page: () => const TerapistScreen(),
+      binding: TerapistBinding(),
     ),
   ];
 }
