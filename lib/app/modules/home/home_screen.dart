@@ -73,7 +73,15 @@ class HomeScreen extends GetView<HomeController> {
                     const SizedBox(height: 24),
                     const SuggestionWidget(
                       image: 'assets/images/logo-joy-2.svg',
-                      title: "How are you \nfelling today?",
+                      widget: Text(
+                        "How are you \nfelling today?",
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontFamily: "Outfit-bold",
+                          fontWeight: FontWeight.w600,
+                          color: MyColors.neutraldDark,
+                        ),
+                      ),
                       titleButton: 'Reply now',
                     ),
                   ],

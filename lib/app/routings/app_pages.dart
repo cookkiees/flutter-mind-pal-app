@@ -1,10 +1,13 @@
 import 'package:get/get.dart';
+
 import '../modules/home/home_binding.dart';
 import '../modules/home/home_screen.dart';
 import '../modules/main/main_binding.dart';
 import '../modules/main/main_screen.dart';
 import '../modules/onboarding/onboarding_binding.dart';
 import '../modules/onboarding/onboarding_screen.dart';
+import '../modules/selfcare/self_binding.dart';
+import '../modules/selfcare/selfcare_screen.dart';
 import '../modules/terapist/terapist_binding.dart';
 import '../modules/terapist/terapist_screen.dart';
 import 'app_routers.dart';
@@ -32,6 +35,11 @@ class AppPages {
       name: AppRouters.terapist,
       page: () => const TerapistScreen(),
       binding: TerapistBinding(),
+    ),
+    GetPage(
+      name: AppRouters.selfCare,
+      page: () => const SelfCareScreen(),
+      binding: SelfCareBinding(),
     ),
   ];
 }
