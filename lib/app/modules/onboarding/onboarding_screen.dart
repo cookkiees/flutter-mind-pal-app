@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:mind_pal_app/app/modules/selfcare/selfcare-detail/selfcare_detail_screen.dart';
 import 'package:mind_pal_app/app/routings/app_routers.dart';
 import 'package:mind_pal_app/app/utils/my_colors.dart';
 import '../../components/header_text_widget.dart';
@@ -33,10 +32,10 @@ class OnboardingScreen extends GetView<OnboardingController> {
         ),
       ),
       controllerColor: MyColors.purple,
-      totalPage: 3,
+      totalPage: 4,
       headerBackgroundColor: Colors.white,
       pageBackgroundColor: Colors.white,
-      background: [Container(), Container(), Container()],
+      background: [Container(), Container(), Container(), Container()],
       speed: 1.8,
       pageBodies: [
         Container(
@@ -242,6 +241,98 @@ class OnboardingScreen extends GetView<OnboardingController> {
                       ),
                     );
                   }),
+                ),
+              )
+            ],
+          ),
+        ),
+        Container(
+          alignment: Alignment.center,
+          width: MediaQuery.of(context).size.width,
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              RichText(
+                textAlign: TextAlign.center,
+                text: const TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'Hey! I\'m',
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontFamily: "Outfit",
+                        fontWeight: FontWeight.bold,
+                        color: MyColors.neutraldDark,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'MindPal',
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontFamily: "Outfit-bold",
+                        fontWeight: FontWeight.bold,
+                        color: MyColors.purple,
+                      ),
+                    ),
+                    TextSpan(
+                      text: '\n\nOur conversations are private &',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: "Outfit",
+                        fontWeight: FontWeight.bold,
+                        color: MyColors.neutralGrey,
+                      ),
+                    ),
+                    TextSpan(
+                      text: '\nanonymous, so there is no login.',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: "Outfit",
+                        fontWeight: FontWeight.bold,
+                        color: MyColors.neutralGrey,
+                      ),
+                    ),
+                    TextSpan(
+                      text: '\nJust choose a nickname and we\'re \ngood to go',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: "Outfit",
+                        fontWeight: FontWeight.bold,
+                        color: MyColors.neutralGrey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 32.0),
+                child: SvgPicture.asset(
+                  "assets/images/logo-joy-5.svg",
+                  height: 150,
+                ),
+              ),
+              TextFormField(
+                style: const TextStyle(fontSize: 18),
+                decoration: const InputDecoration(
+                  hintText: "Choose a Nickname...",
+                  hintStyle: TextStyle(
+                      fontSize: 18,
+                      fontFamily: "Outfit",
+                      fontWeight: FontWeight.w500),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12),
+                    ),
+                  ),
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12),
+                    ),
+                  ),
                 ),
               )
             ],
