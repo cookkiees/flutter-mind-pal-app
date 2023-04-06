@@ -68,7 +68,7 @@ class OnboardingScreen extends GetView<OnboardingController> {
                           fontWeight: FontWeight.w600),
                     ),
                     TextSpan(
-                      text: 'MindPal',
+                      text: 'MindPal ',
                       style: TextStyle(
                           fontFamily: "Outfit-bold",
                           color: MyColors.purple,
