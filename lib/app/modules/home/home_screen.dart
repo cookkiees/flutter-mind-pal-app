@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:mind_pal_app/app/routings/app_routers.dart';
 import '../../components/myselfpath_list_widget.dart';
 import '../../components/suggestion_widget.dart';
 import '../../components/text_title_widget.dart';
@@ -71,9 +72,10 @@ class HomeScreen extends GetView<HomeController> {
                       ],
                     ),
                     const SizedBox(height: 24),
-                    const SuggestionWidget(
+                    SuggestionWidget(
                       image: 'assets/images/logo-joy-2.svg',
-                      widget: Text(
+                      onPressed: () => Get.toNamed(AppRouters.aiChat),
+                      widget: const Text(
                         "How are you \nfelling today?",
                         style: TextStyle(
                           fontSize: 24,
