@@ -24,7 +24,7 @@ class SelfCareDetailScreen extends GetView<SelfCareController> {
               size: 24,
             )),
         title: const Text(
-          "Sleep Stories & Sounds",
+          "Sleep Stories & Sounds ",
           style: TextStyle(
             fontFamily: "Outfit-bold",
             color: MyColors.neutraldDark,
