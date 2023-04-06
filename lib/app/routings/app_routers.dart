@@ -5,4 +5,5 @@ abstract class AppRouters {
   static const home = '/home';
   static const terapist = '/terapist';
   static const selfCare = '/selfCare';
+  static const journal = '/journal';
 }
