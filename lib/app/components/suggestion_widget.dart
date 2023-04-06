@@ -10,11 +10,13 @@ class SuggestionWidget extends StatelessWidget {
     required this.widget,
     required this.titleButton,
     this.size = const Size(155, 40),
+    this.onPressed,
   });
   final String image;
   final Widget widget;
   final String titleButton;
   final Size? size;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class SuggestionWidget extends StatelessWidget {
             widget,
             const SizedBox(height: 16),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: onPressed,
               style: ElevatedButton.styleFrom(
                 backgroundColor: MyColors.purple,
                 minimumSize: size,
