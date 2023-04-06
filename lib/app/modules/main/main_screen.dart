@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:mind_pal_app/app/utils/my_colors.dart';
-
 import '../home/home_screen.dart';
-
 import 'main_controller.dart';
 
 class MainScreen extends StatelessWidget {
