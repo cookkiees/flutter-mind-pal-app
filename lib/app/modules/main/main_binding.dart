@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-
 import '../home/home_controller.dart';
+import '../terapist/terapist_controller.dart';
 import 'main_controller.dart';
 
 class MainBinding implements Bindings {
@@ -8,5 +8,6 @@ class MainBinding implements Bindings {
   void dependencies() {
     Get.put(MainController());
     Get.put(HomeController());
+    Get.put(TerapistController());
   }
 }
