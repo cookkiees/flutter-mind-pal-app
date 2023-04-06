@@ -1,31 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import '../../components/myselfpath_list_widget.dart';
-import '../../components/suggestion_widget.dart';
-import '../../components/text_title_widget.dart';
-import '../../utils/my_colors.dart';
-import 'home_controller.dart';
-import '../../components/header_list_widget.dart';
-import '../../components/appbar_widget.dart';
+import 'package:mind_pal_app/app/components/appbar_widget.dart';
+import 'package:mind_pal_app/app/components/header_list_widget.dart';
+import 'package:mind_pal_app/app/modules/terapist/terapist_controller.dart';
+import 'package:mind_pal_app/app/utils/my_colors.dart';
 
-class HomeScreen extends GetView<HomeController> {
-  const HomeScreen({super.key});
+import '../../components/myselfpath_list_widget.dart';
+import '../../components/text_title_widget.dart';
+
+class TerapistScreen extends GetView<TerapistController> {
+  const TerapistScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size(MediaQuery.of(context).size.width, 56),
-        child: const AppBarWidget(
-          title: "Vicky's Space",
-        ),
+        child: const AppBarWidget(title: "Vicky's Space"),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            vertical: 8.0,
-          ),
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -38,56 +34,77 @@ class HomeScreen extends GetView<HomeController> {
                 height: 120,
                 child: ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: controller.emoji.length,
+                  itemCount: controller.card.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return HeaderListWidget(
-                      svgImage: controller.emoji[index],
+                      svgImage: controller.card[index],
                       title: controller.title[index],
                     );
                   },
                 ),
               ),
+              const SizedBox(height: 8),
+              const TextTitleWidget(title: "UPCOMING SESSION"),
+              const SizedBox(height: 8),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 24.0),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        TextTitleWidget(title: "MY MINDPAL AI"),
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 16.0),
-                          child: Text(
-                            "How to interect?",
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 150,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: MyColors.neutralLightGrey),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      SvgPicture.asset(
+                        "assets/images/logo-joy-3.svg",
+                        height: 100,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "In 2 Days",
                             style: TextStyle(
                               fontSize: 16,
                               fontFamily: "Outfit-bold",
-                              fontWeight: FontWeight.bold,
-                              color: MyColors.neutraldDark,
+                              fontWeight: FontWeight.w700,
+                              color: MyColors.purple,
                             ),
                           ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(height: 24),
-                    const SuggestionWidget(
-                      image: 'assets/images/logo-joy-2.svg',
-                      title: "How are you \nfelling today?",
-                      titleButton: 'Reply now',
-                    ),
-                  ],
+                          SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            "Tue, 22 Mar \n10:30AM",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: "Outfit-bold",
+                              fontWeight: FontWeight.w700,
+                              color: MyColors.neutraldDark,
+                            ),
+                          )
+                        ],
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.more_vert,
+                          size: 32,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
-              const Divider(
-                indent: 16,
-                endIndent: 16,
-                color: MyColors.neutralGrey,
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.0),
-                child: TextTitleWidget(title: "MY SELF-PATH"),
-              ),
+              const SizedBox(height: 8),
+              const TextTitleWidget(title: "MY SELF-PATH"),
+              const SizedBox(height: 16),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 3.7,
                 width: MediaQuery.of(context).size.width,

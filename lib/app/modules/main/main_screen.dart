@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:mind_pal_app/app/modules/terapist/terapist_screen.dart';
 import 'package:mind_pal_app/app/utils/my_colors.dart';
 import '../home/home_screen.dart';
 import 'main_controller.dart';
@@ -18,7 +19,7 @@ class MainScreen extends StatelessWidget {
           index: controller.tabIndex,
           children: [
             const HomeScreen(),
-            Center(child: SvgPicture.asset("assets/icons/Document.svg")),
+            const TerapistScreen(),
             Center(child: SvgPicture.asset("assets/icons/User.svg")),
             Center(child: SvgPicture.asset("assets/icons/Message.svg")),
           ],

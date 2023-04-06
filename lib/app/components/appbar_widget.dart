@@ -30,6 +30,7 @@ class AppBarWidget extends StatelessWidget {
           icon: const Icon(
             Icons.more_vert,
             color: Colors.black,
+            size: 32,
           ),
         )
       ],
