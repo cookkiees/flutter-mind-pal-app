@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:mind_pal_app/app/modules/selfcare/selfcare_screen.dart';
 import 'package:mind_pal_app/app/modules/terapist/terapist_screen.dart';
 import 'package:mind_pal_app/app/utils/my_colors.dart';
 import '../home/home_screen.dart';
@@ -20,7 +21,7 @@ class MainScreen extends StatelessWidget {
           children: [
             const HomeScreen(),
             const TerapistScreen(),
-            Center(child: SvgPicture.asset("assets/icons/User.svg")),
+            const SelfCareScreen(),
             Center(child: SvgPicture.asset("assets/icons/Message.svg")),
           ],
         ),
@@ -109,7 +110,7 @@ class MainScreen extends StatelessWidget {
                             MyColors.neutralLightGrey, BlendMode.srcIn),
                       ),
                     ),
-              label: 'Selft-care',
+              label: 'Self-care',
             ),
             BottomNavigationBarItem(
               icon: controller.tabIndex == 3
