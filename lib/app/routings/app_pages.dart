@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
-
 import '../modules/home/home_binding.dart';
 import '../modules/home/home_screen.dart';
+import '../modules/journal/journal_binding.dart';
+import '../modules/journal/journal_screen.dart';
 import '../modules/main/main_binding.dart';
 import '../modules/main/main_screen.dart';
 import '../modules/onboarding/onboarding_binding.dart';
@@ -40,6 +41,11 @@ class AppPages {
       name: AppRouters.selfCare,
       page: () => const SelfCareScreen(),
       binding: SelfCareBinding(),
+    ),
+    GetPage(
+      name: AppRouters.journal,
+      page: () => const JournalScreen(),
+      binding: JournalBinding(),
     ),
   ];
 }
