@@ -5,6 +5,7 @@ import 'package:mind_pal_app/app/components/appbar_widget.dart';
 import 'package:mind_pal_app/app/components/suggestion_widget.dart';
 import 'package:mind_pal_app/app/components/text_title_widget.dart';
 import 'package:mind_pal_app/app/modules/selfcare/self_controller.dart';
+import 'package:mind_pal_app/app/routings/app_routers.dart';
 
 import '../../components/myselfpath_list_widget.dart';
 import '../../utils/my_colors.dart';
@@ -33,6 +34,7 @@ class SelfCareScreen extends GetView<SelfCareController> {
                 image: "assets/images/logo-joy-4.svg",
                 titleButton: "Unlock Premium",
                 size: const Size(200, 50),
+                onPressed: () => Get.toNamed(AppRouters.subscription),
                 widget: RichText(
                   text: const TextSpan(
                     children: <TextSpan>[

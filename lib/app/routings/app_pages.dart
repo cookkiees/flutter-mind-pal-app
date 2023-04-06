@@ -9,6 +9,8 @@ import '../modules/onboarding/onboarding_binding.dart';
 import '../modules/onboarding/onboarding_screen.dart';
 import '../modules/selfcare/self_binding.dart';
 import '../modules/selfcare/selfcare_screen.dart';
+import '../modules/subscription/subscription_binding.dart';
+import '../modules/subscription/subscription_screen.dart';
 import '../modules/terapist/terapist_binding.dart';
 import '../modules/terapist/terapist_screen.dart';
 import 'app_routers.dart';
@@ -46,6 +48,11 @@ class AppPages {
       name: AppRouters.journal,
       page: () => const JournalScreen(),
       binding: JournalBinding(),
+    ),
+    GetPage(
+      name: AppRouters.subscription,
+      page: () => const SubscriptionScreen(),
+      binding: SubscriptionBinding(),
     ),
   ];
 }
