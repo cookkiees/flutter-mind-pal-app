@@ -19,7 +19,7 @@ class OnboardingScreen extends GetView<OnboardingController> {
           color: Colors.white,
           fontSize: 18.0,
           fontWeight: FontWeight.bold),
-      onFinish: () => Get.toNamed(AppRouters.main),
+      onFinish: () => Get.offAllNamed(AppRouters.main),
       finishButtonStyle:
           const FinishButtonStyle(backgroundColor: MyColors.purple),
       skipTextButton: const Text(
@@ -46,7 +46,7 @@ class OnboardingScreen extends GetView<OnboardingController> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SvgPicture.asset("assets/images/logo-joy.svg", height: 200),
+              SvgPicture.asset("assets/images/logo-joy-1.svg", height: 200),
               const SizedBox(
                 height: 16,
               ),
@@ -62,7 +62,7 @@ class OnboardingScreen extends GetView<OnboardingController> {
                           fontWeight: FontWeight.w600),
                     ),
                     TextSpan(
-                      text: 'MindPal ',
+                      text: 'MindPal',
                       style: TextStyle(
                           fontFamily: "Outfit-bold",
                           color: MyColors.purple,
