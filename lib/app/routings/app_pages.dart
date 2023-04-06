@@ -1,4 +1,7 @@
 import 'package:get/get.dart';
+
+import '../modules/aichat/aichat_binding.dart';
+import '../modules/aichat/aichat_screen.dart';
 import '../modules/home/home_binding.dart';
 import '../modules/home/home_screen.dart';
 import '../modules/journal/journal_binding.dart';
@@ -53,6 +56,11 @@ class AppPages {
       name: AppRouters.subscription,
       page: () => const SubscriptionScreen(),
       binding: SubscriptionBinding(),
+    ),
+    GetPage(
+      name: AppRouters.aiChat,
+      page: () => const AIChatScreen(),
+      binding: AIChatBinding(),
     ),
   ];
 }

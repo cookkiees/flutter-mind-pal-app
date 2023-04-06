@@ -7,4 +7,5 @@ abstract class AppRouters {
   static const selfCare = '/selfCare';
   static const journal = '/journal';
   static const subscription = '/subscription';
+  static const aiChat = '/aiChat';
 }
