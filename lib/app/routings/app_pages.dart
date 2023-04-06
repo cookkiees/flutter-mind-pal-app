@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-
 import '../modules/aichat/aichat_binding.dart';
 import '../modules/aichat/aichat_screen.dart';
 import '../modules/home/home_binding.dart';
@@ -11,6 +10,7 @@ import '../modules/main/main_screen.dart';
 import '../modules/onboarding/onboarding_binding.dart';
 import '../modules/onboarding/onboarding_screen.dart';
 import '../modules/selfcare/self_binding.dart';
+import '../modules/selfcare/selfcare-detail/selfcare_detail_screen.dart';
 import '../modules/selfcare/selfcare_screen.dart';
 import '../modules/subscription/subscription_binding.dart';
 import '../modules/subscription/subscription_screen.dart';
@@ -61,6 +61,11 @@ class AppPages {
       name: AppRouters.aiChat,
       page: () => const AIChatScreen(),
       binding: AIChatBinding(),
+    ),
+    GetPage(
+      name: AppRouters.selfCareDetail,
+      page: () => const SelfCareDetailScreen(),
+      binding: SelfCareBinding(),
     ),
   ];
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:mind_pal_app/app/modules/selfcare/selfcare-detail/selfcare_detail_screen.dart';
 import 'package:mind_pal_app/app/routings/app_routers.dart';
 import 'package:mind_pal_app/app/utils/my_colors.dart';
 import '../../components/header_text_widget.dart';
@@ -183,57 +184,60 @@ class OnboardingScreen extends GetView<OnboardingController> {
                   itemBuilder: ((context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Container(
-                        padding:
-                            const EdgeInsets.only(left: 16, top: 16, right: 16),
-                        width: 327,
-                        height: 326,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: MyColors.neutraldDark),
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(8),
-                          ),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  controller.svgTitlePerson[index],
-                                  textAlign: TextAlign.center,
-                                  style: const TextStyle(
-                                    fontFamily: "Outfit-bold",
-                                    color: MyColors.neutraldDark,
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 8,
-                                ),
-                                Text(
-                                  controller.svgSubtitlePerson[index],
-                                  textAlign: TextAlign.start,
-                                  style: const TextStyle(
-                                    fontFamily: "Outfit-bold",
-                                    color: MyColors.neutralGrey,
-                                    fontSize: 15.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ],
+                      child: GestureDetector(
+                        onTap: () => Get.toNamed(AppRouters.selfCareDetail),
+                        child: Container(
+                          padding: const EdgeInsets.only(
+                              left: 16, top: 16, right: 16),
+                          width: 327,
+                          height: 326,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: MyColors.neutraldDark),
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(8),
                             ),
-                            Align(
-                              alignment: Alignment.bottomRight,
-                              child: SvgPicture.asset(
-                                controller.svgImagePerson[index],
-                                height: 170,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    controller.svgTitlePerson[index],
+                                    textAlign: TextAlign.center,
+                                    style: const TextStyle(
+                                      fontFamily: "Outfit-bold",
+                                      color: MyColors.neutraldDark,
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    controller.svgSubtitlePerson[index],
+                                    textAlign: TextAlign.start,
+                                    style: const TextStyle(
+                                      fontFamily: "Outfit-bold",
+                                      color: MyColors.neutralGrey,
+                                      fontSize: 15.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            )
-                          ],
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: SvgPicture.asset(
+                                  controller.svgImagePerson[index],
+                                  height: 170,
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     );
