@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:mind_pal_app/app/modules/main/main_binding.dart';
+import 'package:mind_pal_app/app/modules/main/main_screen.dart';
 import 'package:mind_pal_app/app/modules/onboarding/onboarding_binding.dart';
 
 import '../modules/onboarding/onboarding_screen.dart';
@@ -10,8 +12,13 @@ class AppPages {
   static final routes = [
     GetPage(
       name: AppRouters.onboarding,
-      page: () => OnboardingScreen(),
+      page: () => const OnboardingScreen(),
       binding: OnboardingBinding(),
+    ),
+    GetPage(
+      name: AppRouters.main,
+      page: () => const MainScreen(),
+      binding: MainBinding(),
     ),
   ];
 }
