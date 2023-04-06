@@ -169,37 +169,3 @@ class AIChatScreen extends GetView<AIChatController> {
     );
   }
 }
-
-class TypingWidget extends StatelessWidget {
-  const TypingWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SvgPicture.asset(
-          'assets/icons/Typing.svg',
-          height: 25,
-        ),
-        RichText(
-          text: TextSpan(
-            children: <TextSpan>[
-              TextSpan(
-                text: 'MindFul AI',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.grey.shade700),
-              ),
-              TextSpan(
-                text: ' is replying',
-                style: TextStyle(
-                    fontWeight: FontWeight.w500, color: Colors.grey.shade600),
-              ),
-            ],
-          ),
-        )
-      ],
-    );
-  }
-}
