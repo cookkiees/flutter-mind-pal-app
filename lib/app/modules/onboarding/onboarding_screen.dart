@@ -314,7 +314,10 @@ class OnboardingScreen extends GetView<OnboardingController> {
                 ),
               ),
               TextFormField(
-                style: const TextStyle(fontSize: 18),
+                style: const TextStyle(
+                    fontSize: 18,
+                    fontFamily: "Outfit",
+                    fontWeight: FontWeight.bold),
                 decoration: const InputDecoration(
                   hintText: "Choose a Nickname...",
                   hintStyle: TextStyle(
